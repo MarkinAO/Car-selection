@@ -7,15 +7,20 @@ body {
 
 /* Шапка */
 .header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
     display: flex;
     gap: 30px;
     justify-content: center;
     align-items: center;
+    width: 100%;
     padding: 0 50px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.7);    
+    background-size: cover;    
+    background-color: #008adc;
     box-shadow: 0 0 15px 0 #ffffff;
 }
 
@@ -24,21 +29,25 @@ body {
     text-transform: uppercase;
     font-size: 46px;
     font-weight: bold;   
-    color: #008adc;    
+    color: #ffffff;    
+}
+
+.header__title:hover {
+    cursor: pointer;
 }
 
 .header__button {
     padding: 10px;
     text-align: center;
     font-size: 22px;    
-    color: #008adc;
-    border: 3px solid #008adc;
+    color: #ffffff;
+    border: 3px solid #ffffff;
     border-radius: 40px;
 }
 
 .header__button:hover {
     cursor: pointer;
-    box-shadow: 0 0 5px 1px #008adc;
+    box-shadow: 0 0 5px 1px #ffffff;
 }
 
 @media (max-width:800px) {
@@ -49,7 +58,7 @@ body {
 
 /* Основной контент */
 .main {    
-    margin: 100px auto 0;
+    margin: 180px auto 0;
     padding: 20px;
     max-width: 1280px;    
 }
@@ -124,6 +133,12 @@ body {
     animation: flashing 0.6s infinite alternate 0.4s;
 }
 
+.lead-magnet__footer {
+    display: flex;
+    gap: 5px;
+    margin-top: 40px;
+}
+
 @keyframes flashing {
     0% {background-color: none;}
     100% {background-color: rgb(256, 256, 256);}
@@ -140,7 +155,7 @@ body {
 .flex-item::before {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: -3;
     top: -10px;
     left: -50%;
     display: block;
@@ -242,12 +257,18 @@ body {
     width: 100%;
     max-width: 250px;
     padding: 10px;
-    box-shadow: 0 0 10px 1px #000000;
+    color: #008adc;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 10px 1px #008adc;
     border-radius: 5px;
+    border: 3px solid #f0f0f0;
 }
 
-.btn:hover {
-    background-color: white;    
+.btn:hover {    
+    background-color: white;
+    box-shadow: 0 0 3px 1px #008adc;
+    border: 3px solid #008adc;
 }
 
 .btn:focus {
@@ -282,12 +303,17 @@ body {
     width: 1100px;
     height: 1100px;
     position: absolute;
-    z-index: 2;
-    top: -280px;
-    left: -845px;
-    background-image: url(../images/4.png);
+    z-index: -2;
+    top: -285px;
+    left: -890px;
+    background-image: url(../images/44.png);
     background-repeat: no-repeat;
     background-size: contain;
+    transition: 1s;
+}
+
+.customers:hover::after {    
+    transform: rotate(30deg);
 }
 
 .customers__title {
@@ -353,6 +379,43 @@ body {
     background-color: #008adc;
 }
 
+/* Услуги и цены */
+.products {    
+    margin: 130px 0;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.products::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: 110%;
+    background-color: rgba(0, 138, 220, 1);
+    transform: translate(-50%);    
+}
+
+.products__title {
+    color: #ffffff;
+}
+
+.products__wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.products__card {
+    width: 300px;
+    min-height: 400px;
+    background-color: #ffffff;
+}
 
 /* Подвал */
 .footer {
@@ -364,9 +427,54 @@ body {
 
 .footer-wrap {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 10px;    
+    color: #ffffff;
 }
 
+.footer__col {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+/* .footer__text {
+    
+} */
+
 .footer__phone {
-    color: #ffffff;
+    color: inherit;
+    text-decoration: underline dotted;
+}
+
+.footer__messenger {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.1s;
+}
+
+.footer__messenger:hover {
+    width: 52px;
+    height: 52px;
+}
+
+.footer__messenger_wa {
+    background-image: url(../images/wa.png);    
+}
+
+.footer__messenger_tg {
+    background-image: url(../images/tg.png);
+}
+
+.footer__messenger_tel {
+    background-image: url(../images/tel.png);
+}
+
+.footer__messenger_vk {
+    background-image: url(../images/vk.png);
 }

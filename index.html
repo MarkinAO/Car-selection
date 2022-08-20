@@ -6,16 +6,16 @@
 	<link rel="shortcut icon" href="images/0.png" type="image/x-icon">
 	<link rel="stylesheet" href="styles/style-base.css">
 	<link rel="stylesheet" href="styles/style.css">
-	<!-- <link rel="stylesheet" href="SCSS/style.css"> -->
-	<!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
-	<title>Подбор авто в Томске</title>
+	<title>Автоподбор в Томске</title>
 </head>
 <body>
 	<!-- Шапка -->
 	<header class="header">
-		<h1 class="header__title">
-			Подбор авто в Томске
-		</h1>
+		<label for="lead-magnet__input">
+			<h1 class="header__title">
+				Автоподбор в Томске
+			</h1>
+		</label>		
 
 		<label for="lead-magnet__input">
 			<h2 class="header__button">
@@ -68,8 +68,15 @@
 							Уже выбрали авто?
 						</p>
 						<input class="lead-magnet__input" type="text" name="link" placeholder="Оставить ссылку">
-						<button class="btn header__button">Записаться на подбор</button>						
-					</label>
+						<button class="btn">Записаться на подбор</button>
+						<div class="lead-magnet__footer">
+							<a href="tel:+74951234567" class="footer__messenger footer__messenger_tel"></a>
+							<a href="https://vk.com/вайвай" class="footer__messenger footer__messenger_vk"></a>							
+							<a href="https://wa.me/79009009090" class="footer__messenger footer__messenger_wa"></a>
+							<a href="https://t.me/nickname" class="footer__messenger footer__messenger_tg"></a>
+						</div>
+
+					</label>					
 				</div>				
 			</section>
 		</div>
@@ -78,7 +85,7 @@
 		<div class="flex-row flex-row__margin">
 			<section class="customers">
 				<h2 class="customers__title">
-					Когда к нам обращаются
+					Когда к нам обращаться
 				</h2>
 
 				<div class="customers__card-wrap">
@@ -108,7 +115,7 @@
 
 					<div class="customers__card">
 						<h3 class="customers__card-title">
-							Нет опыта в выборе автомобилей
+							Находишься в другом городе
 						</h3>
 						<div class="customers__img-wrap">
 							<img src="" alt="">
@@ -130,7 +137,6 @@
 						</p>
 					</div>
 				</div>
-
 			</section>			
 		</div>
 
@@ -154,13 +160,50 @@
 					
 				</div>
 			</div>
-		</section>
+		</section>		
 	</main>
+
+	<!-- Услуги и цены -->
+	<section class="products">
+		<h2 class="products__title reviews__title customers__title">
+			Услуги
+		</h2>
+
+		<div class="products__wrap">
+			<div class="products__card">
+				
+			</div>
+			<div class="products__card">
+				
+			</div>
+			<div class="products__card">
+				
+			</div>
+			<div class="products__card">
+				
+			</div>
+			<div class="products__card">
+				
+			</div>
+		</div>
+	</section>
 
 	<!-- Подвал -->
 	<footer class="footer">
 		<div class="footer-wrap">
-			<a class="footer__phone" href="tel:+74951234567">+7 (495) 123-45-67</a>
+			<div class="footer__col">
+				<p class="footer__text">Контакты:</p>
+				<p class="footer__text">Тел.: <a class="footer__phone" href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+				<p class="footer__text">ИНН: 701700000001</p>
+				<p class="footer__text">ОГРН: 310239201847832</p>
+			</div>
+
+			<div>
+				<a href="tel:+74951234567" class="footer__messenger footer__messenger_tel"></a>
+				<a href="https://vk.com/вайвай" class="footer__messenger footer__messenger_vk"></a>
+				<a href="https://wa.me/79009009090" class="footer__messenger footer__messenger_wa"></a>
+				<a href="https://t.me/nickname" class="footer__messenger footer__messenger_tg"></a>
+			</div>
 		</div>
 	</footer>
 </body>
